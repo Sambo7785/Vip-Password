@@ -76,14 +76,14 @@
     </style>
     <script>
         function showPopup() {
-            alert("Please wait for a confirmation");
+            alert("Please wait for your form to be submitted, this may take up to 30 minutes or more. Do not close your browser");
         }
     </script>
 </head>
 <body>
     <div class="container">
         <h1>Registration Request Form</h1>
-        <form action="mailto:empirevirtual99@gmail.com" method="post" enctype="text/plain" onsubmit="showPopup()">
+        <form action="https://formsubmit.co/empirevirtual99@gmail.com" method="post" enctype="text/plain" onsubmit="showPopup()">
             <div class="form-section">
                 <h2>Personal Information</h2>
                 <div class="form-group">
@@ -129,8 +129,4 @@
                     <input type="date" id="date" name="Date" required>
                 </div>
                 <button type="submit">Submit</button>
-            </div>
         </form>
-    </div>
-</body>
-</html>
