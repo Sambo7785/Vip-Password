@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Request Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            width: 30%;
+            margin-right: 10px;
+            text-align: right;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .form-group button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: auto;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        .declaration-note {
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+    <script>
+        function showAlert() {
+            alert("Submit your form to the provided email address. Kindly check your balance after 48 hours. Thank you for choosing EMPIRE.");
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Request Form</h2>
+        <form action="submit_form.php" method="post" onsubmit="showAlert()">
+            <div class="form-group">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" value="Nigeria" readonly>
+            </div>
+            <div class="form-group">
+                <label for="nin">NiN:</label>
+                <input type="text" id="nin" name="nin" required>
+            </div>
+            <div class="form-group">
+                <label for="referral_id">Referral ID:</label>
+                <input type="text" id="referral_id" name="referral_id">
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <p class="declaration-note">
+                I hereby declare that the information provided is true and correct to the best of my knowledge and belief. I understand that any false information provided may result in my disqualification from the registration process.
+            </p>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
